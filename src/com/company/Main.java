@@ -22,6 +22,10 @@ public class Main {
 
         Scanner sc = new Scanner(br);
 
-
+        int n = 0;
+        while (sc.next() != null){
+            nums[n] = sc.;
+            n++;
+        }
     }
 }
