@@ -23,9 +23,12 @@ public class Main {
         Scanner sc = new Scanner(br);
 
         int n = 0;
-        while (sc.next() != null){
+        while (sc.nextLine() != null){
             String w = sc.nextLine();
-            String [] broken = w.split("\t");
+
+            //break it all up with a delimiter...
+            String [] broken = new String [500];
+
             int q = Integer.parseInt(broken[0]);
             nums[n] = q;
             n++;

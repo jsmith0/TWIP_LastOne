@@ -1,2 +1,2 @@
-Name1   55  a
-Name2   78  q
+Name1   45  q
+Name2   78  y
