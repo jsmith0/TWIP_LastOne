@@ -15,7 +15,7 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new FileReader("tester.txt"));
 
-        ArrayList<String> line = new ArrayList;
+        ArrayList<String> line = new ArrayList();
         String [] names = new String[500];
         String [] nums = new String[500];
         int [] grade1 = new int[500];
@@ -25,11 +25,12 @@ public class Main {
         Scanner sc = new Scanner(br);
 
         int n = 0;
-        int p = 1;
+        int p = 0;
         while (sc.hasNextLine()){
             String w = sc.nextLine();
-            line.get(p).split("\t");
-            names[n] = line[0];
+            line.add().split("\t");
+            names[n] = line.get(0);
+            nums[n] = line.get(1);
 /*
             //break it all up with a delimiter...
             String [] broken = new String [500];
@@ -47,6 +48,7 @@ public class Main {
             nums[n] = e;
             n++;
 */
+            line.clear();
             n++;
         }
         System.out.println(nums);
