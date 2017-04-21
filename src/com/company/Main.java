@@ -15,7 +15,9 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new FileReader("tester.txt"));
 
-        int [] nums = new int[500];
+        ArrayList<String> line = new ArrayList;
+        String [] names = new String[500];
+        String [] nums = new String[500];
         int [] grade1 = new int[500];
         int [] grade2 = new int[500];
         int [] gradeTotal = new int[500];
@@ -23,14 +25,28 @@ public class Main {
         Scanner sc = new Scanner(br);
 
         int n = 0;
-        while (sc.nextLine() != null){
+        int p = 1;
+        while (sc.hasNextLine()){
             String w = sc.nextLine();
-
+            line.get(p).split("\t");
+            names[n] = line[0];
+/*
             //break it all up with a delimiter...
             String [] broken = new String [500];
+            //ASCII code for tab is.. 9
 
-            int q = Integer.parseInt(broken[0]);
-            nums[n] = q;
+            String e;
+            for (int i = 0; i <w.length(); i++){
+                char a = w.charAt(i);
+                if (a == 9){
+                    e = w.substring(0,a);
+                }
+            }
+
+            e = broken[n];
+            nums[n] = e;
+            n++;
+*/
             n++;
         }
         System.out.println(nums);
