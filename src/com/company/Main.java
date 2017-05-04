@@ -16,41 +16,34 @@ public class Main {
         BufferedReader br = new BufferedReader(new FileReader("tester.txt"));
 
         ArrayList<String> line = new ArrayList();
-        String [] names = new String[500];
-        String [] nums = new String[500];
-        int [] grade1 = new int[500];
-        int [] grade2 = new int[500];
-        int [] gradeTotal = new int[500];
+       ArrayList<String> names = new ArrayList<>();
+        ArrayList<String> nums = new ArrayList<>();
+        ArrayList<String> grade1 = new ArrayList<>();
+        ArrayList<String> grade2 = new ArrayList<>();
+        ArrayList<String> gradeTotal = new ArrayList<>();
 
-        Scanner sc = new Scanner(br);
+        Scanner sc = new Scanner("tester.txt");
 
         int n = 0;
         int p = 0;
+
+        String w = sc.nextLine();
+
+
+
         while (sc.hasNextLine()){
-            String w = sc.nextLine();
-            line.add().split("\t");
-            names[n] = line.get(0);
-            nums[n] = line.get(1);
-/*
-            //break it all up with a delimiter...
-            String [] broken = new String [500];
-            //ASCII code for tab is.. 9
-
-            String e;
-            for (int i = 0; i <w.length(); i++){
-                char a = w.charAt(i);
-                if (a == 9){
-                    e = w.substring(0,a);
-                }
-            }
-
-            e = broken[n];
-            nums[n] = e;
-            n++;
-*/
-            line.clear();
-            n++;
+                String[] temp;
+                temp = w.split(":");
+                names.add(temp[0]);
+                nums.add(temp[1]);
+                grade1.add(temp[2]);
+                w = (sc.nextLine());
+                n++;
         }
+
+
+        System.out.println(names);
         System.out.println(nums);
+        System.out.println(grade1);
     }
 }
