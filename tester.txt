@@ -1,7 +1,7 @@
-Name1:45:2
-Name2:78:1
-Name3:333:2
-Name4:98:1
-Name5:98:1
-Name6:98:1
-Name7:98:1
+Name1:45:+2 done right, +.5 assdf, +2
+Name2:78:+1 done right, +.5 assdf, +2
+Name3:333+:2 done right, +.5 assdf, +2
+Name4:98:+1 done right, +.5 assdf, +2
+Name5:98:+1 done right, +.5 assdf, +2
+Name6:98:+1 done right, +.5 assdf, +2
+Name7:98:+1 done right, +.5 assdf, +2
