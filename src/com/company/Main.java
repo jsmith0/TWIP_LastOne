@@ -28,8 +28,9 @@ public class Main {
 
 
 
-
+        sc1.nextLine();
         while (sc1.hasNextLine()) {
+
             String nxt = sc1.nextLine();
             String e[] = nxt.split(":");
             String name = e[1];
