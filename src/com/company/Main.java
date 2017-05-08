@@ -15,7 +15,9 @@ public class Main {
         ArrayList<String> names = new ArrayList<>();
         ArrayList<String> nums = new ArrayList<>();
         ArrayList<Double> grade1 = new ArrayList<>();
+        ArrayList<Double> grade1Syntax = new ArrayList<>();
         ArrayList<Double> grade2 = new ArrayList<>();
+        ArrayList<Double> grade2Syntax = new ArrayList<>();
         ArrayList<Double> gradeTotal = new ArrayList<>();
 
         int n = 0;
@@ -24,13 +26,18 @@ public class Main {
         File file = new File(filename);
         Scanner sc1 = new Scanner(file);
 
+
+
+
         while (sc1.hasNextLine()) {
             String nxt = sc1.nextLine();
             String e[] = nxt.split(":");
-            String name = e[0];
-            String secretnum = e[1];
+            String name = e[1];
+            String secretnum = e[0];
             String fr1 = e[2];
-            String fr2 = e[3];
+            String g1S = e[3];
+            String fr2 = e[4];
+            String g2S = e[5];
             names.add(name);
             nums.add(secretnum);
 
@@ -59,6 +66,13 @@ public class Main {
                 double soClose = Double.parseDouble(almost[i]);
                 fr1Score += soClose;
             }
+
+            //Finds the syntax errors in FR1
+            double tempSyntax = Double.parseDouble(g1S);
+            tempSyntax = tempSyntax*0.25;
+            grade1Syntax.add(tempSyntax);
+
+            fr1Score = fr1Score - grade1Syntax.get(n);
             grade1.add(fr1Score);
 
 
@@ -87,20 +101,29 @@ public class Main {
                 double soClose44 = Double.parseDouble(almost44[i]);
                 fr2Score += soClose44;
             }
+            //find the syntax errors in the FR2
+            double tempSyntax44 = Double.parseDouble(g2S);
+            tempSyntax44 = tempSyntax44*0.25;
+            grade2Syntax.add(tempSyntax44);
+
+            fr2Score = fr2Score - grade2Syntax.get(n);
             grade2.add(fr2Score);
 
             double both = grade1.get(n) + grade2.get(n);
             gradeTotal.add(both);
 
             n++;
+
+
         }
-        System.out.println(names);
         System.out.println(nums);
+        System.out.println(names);
         System.out.println(grade1);
+        System.out.println(grade1Syntax);
         System.out.println(grade2);
+        System.out.println(grade2Syntax);
         System.out.println(gradeTotal);
 
-        System.out.println("Hello, welcome to the student free response calculator");
-        //gotta find out what else mr. p needs
+
     }
 }
