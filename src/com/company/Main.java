@@ -26,7 +26,7 @@ public class Main {
         File file = new File(filename);
         Scanner sc1 = new Scanner(file);
 
-//
+        //for some reason i couldn't get \t to delimit. so i made the tester file and delimited by : an i got it working pretty well
 
         sc1.nextLine();
         while (sc1.hasNextLine()) {
@@ -64,6 +64,7 @@ public class Main {
                     }
                 }
                 almost[i] = temp2;
+
                 double soClose = Double.parseDouble(almost[i]);
                 fr1Score += soClose;
             }
@@ -117,6 +118,11 @@ public class Main {
 
 
         }
+        double sum = 0;
+        for (int i = 0; i <gradeTotal.size(); i++){
+            sum+=gradeTotal.get(i);
+        }
+        sum = sum/gradeTotal.size();
         System.out.println(nums);
         System.out.println(names);
         System.out.println(grade1);
@@ -124,6 +130,7 @@ public class Main {
         System.out.println(grade2);
         System.out.println(grade2Syntax);
         System.out.println(gradeTotal);
+        System.out.println(sum);
 
 
     }
